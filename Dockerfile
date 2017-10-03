@@ -1,4 +1,4 @@
-FROM node:7.8
+FROM node:8.6
 
 RUN npm install --global gulp-cli mocha mocha-junit-reporter \
     && mkdir -p /var/mobichord/logs/ \
