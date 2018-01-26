@@ -1,7 +1,6 @@
-FROM node:8.6
+FROM node:latest
 
-RUN npm install --global gulp-cli mocha mocha-junit-reporter \
-    && mkdir -p /var/mobichord/logs/ \
+RUN mkdir -p /var/mobichord/logs/ \
     && apt-get update \
     && apt-get install apt-transport-https software-properties-common ca-certificates curl python-pip libpython-dev python-dev -y --no-install-recommends \
     && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - \
